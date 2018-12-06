@@ -195,7 +195,8 @@ public class MaxPQ<Key> implements Iterable<Key> {
         }
     }
 
-    private void sink(int k) {
+    private void
+    sink(int k) {
         while (2*k <= n) {
             int j = 2*k;
             if (j < n && less(j, j+1)) j++;
