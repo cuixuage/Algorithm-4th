@@ -15,7 +15,7 @@ import edu.princeton.cs.algs4.EdgeWeightedDigraph;
  *  edge-weighted digraph G from vertex s, or finds a negative cost cycle
  *  reachable from s.
  *
- *  % java BellmanFordSP tinyEWDn.txt 0
+ *  % java BellmanFordSP tinyEWDnc.txt 0
  *  0 to 0 ( 0.00)
  *  0 to 1 ( 0.93)  0->2  0.26   2->7  0.34   7->3  0.39   3->6  0.52   6->4 -1.25   4->5  0.35   5->1  0.32
  *  0 to 2 ( 0.26)  0->2  0.26
@@ -81,6 +81,8 @@ public class BellmanFordSP {
 
         // Bellman-Ford algorithm
         queue = new Queue<Integer>();
+
+        //开始计算
         queue.enqueue(s);
         onQueue[s] = true;
         while (!queue.isEmpty() && !hasNegativeCycle()) {
@@ -268,9 +270,13 @@ public class BellmanFordSP {
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-        In in = new In(args[0]);
-        int s = Integer.parseInt(args[1]);
+//        In in = new In(args[0]);
+//        int s = Integer.parseInt(args[1]);
+//        EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
+
+        In in = new In("./chapter4_graphs/shortestPaths/tinyEWDnc.txt");
         EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
+        int s = Integer.parseInt("0");
 
         BellmanFordSP sp = new BellmanFordSP(G, s);
 

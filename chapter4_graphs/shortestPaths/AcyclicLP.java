@@ -144,7 +144,7 @@ public class AcyclicLP {
 //        EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
         In in = new In("./chapter4_graphs/shortestPaths/tinyEWDAG.txt");
         EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
-        int s = Integer.parseInt("0");
+        int s = Integer.parseInt("5");
 
         AcyclicLP lp = new AcyclicLP(G, s);
 
