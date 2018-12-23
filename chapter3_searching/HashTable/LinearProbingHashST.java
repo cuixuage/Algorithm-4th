@@ -253,10 +253,15 @@ public class LinearProbingHashST<Key, Value> {
      */
     public static void main(String[] args) {
         LinearProbingHashST<String, Integer> st = new LinearProbingHashST<String, Integer>();
-        for (int i = 0; !StdIn.isEmpty(); i++) {
-            String key = StdIn.readString();
-            st.put(key, i);
-        }
+//        for (int i = 0; !StdIn.isEmpty(); i++) {
+//            String key = StdIn.readString();
+//            st.put(key, i);
+//        }
+
+        String test = "S E A R C H E X A M P L E";
+        String[] splited = test.split("\\s+");
+        for(int i=0;i<splited.length;i++)
+            st.put(splited[i],i);
 
         // print keys
         for (String s : st.keys())
